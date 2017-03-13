@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>ai.skymind.training</groupId>
+    <artifactId>training-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>ai.skymind.training</groupId>
+  <artifactId>training-labs</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>training-labs</name>
+  <url>http://maven.apache.org</url>
+
+<!-- added -->
+
+  <repositories>
+    <repository>
+      <id>snapshots-repo</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus snapshot repository</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <name>Nexus Release Repository</name>
+      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.nd4j</groupId>
+        <artifactId>nd4j-native-platform</artifactId>
+        <version>${nd4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nd4j</groupId>
+        <artifactId>nd4j-cuda-7.5-platform</artifactId>
+        <version>${nd4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nd4j</groupId>
+        <artifactId>nd4j-cuda-8.0-platform</artifactId>
+        <version>${nd4j.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+
+  <!-- added -->
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.nd4j</groupId>
+      <artifactId>${nd4j.backend}</artifactId>
+     <!-- th<version>${nd4j.version}</version> -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.deeplearning4j</groupId>
+      <artifactId>deeplearning4j-core</artifactId>
+      <version>${dl4j.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.deeplearning4j</groupId>
+      <artifactId>deeplearning4j-ui_2.10</artifactId>
+      <version>${dl4j.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+    </dependency>
+
+    <!-- th
+    <dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-api</artifactId>
+      <version>${datavec.version}</version>
+    </dependency>
+-->
+    <!-- dependency for spark java app -->
+    <dependency>
+      <groupId>com.sparkjava</groupId>
+      <artifactId>spark-core</artifactId>
+      <version>2.5.4</version>
+    </dependency>
+
+    <!-- th
+    <dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-api</artifactId>
+      <version>${datavec.version}</version>
+    </dependency>
+    -->
+
+
+   <!-- <dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-spark_${scala.binary.version}</artifactId>
+      <version>${datavec.version}</version>
+    </dependency>
+
+-->
+      <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core_2.11 -->
+
+
+    <dependency>
+      <groupId>org.datavec</groupId>
+      <artifactId>datavec-spark_2.10</artifactId>
+      <version>0.7.3-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+          <groupId>org.apache.spark</groupId>
+          <artifactId>spark-core_2.10</artifactId>
+          <version>1.6.2</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.deeplearning4j</groupId>
+          <artifactId>spark_2.10</artifactId>
+          <version>0.7.3-SNAPSHOT</version>
+      </dependency>
+
+
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-core_2.10</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+
+
+  </dependencies>
+</project>
