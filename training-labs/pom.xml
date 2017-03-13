@@ -99,7 +99,7 @@
     <dependency>
       <groupId>org.deeplearning4j</groupId>
       <artifactId>deeplearning4j-modelimport</artifactId>
-      <version>0.7.3-SNAPSHOT</version>
+      <version>${dl4j.version}</version>
     </dependency>
     <!-- th
     <dependency>
@@ -133,7 +133,7 @@
 -->
       <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core_2.11 -->
 
-
+<!--
 
     <dependency>
       <groupId>org.datavec</groupId>
@@ -152,7 +152,7 @@
           <artifactId>spark_2.10</artifactId>
           <version>0.7.3-SNAPSHOT</version>
       </dependency>
-
+-->
 
     <dependency>
       <groupId>com.typesafe</groupId>
@@ -165,12 +165,14 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <!--
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-core_2.10</artifactId>
       <version>1.6.2</version>
     </dependency>
-
+-->
 
   </dependencies>
 </project>
