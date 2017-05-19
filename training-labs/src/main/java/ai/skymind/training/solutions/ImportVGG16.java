@@ -5,6 +5,7 @@ import org.datavec.image.loader.NativeImageLoader;
 import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.deeplearning4j.nn.modelimport.keras.KerasModelImport;
 import org.deeplearning4j.nn.modelimport.keras.trainedmodels.TrainedModels;
+import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
 import org.nd4j.linalg.dataset.api.preprocessor.VGG16ImagePreProcessor;
@@ -24,7 +25,6 @@ public class ImportVGG16 {
 
         // ComputationGraph model = KerasModelImport.importKerasModelAndWeights("/Users/tomhanlon/tensorflow/vgg16/keras-model-zoo/deep-learning-models/vgg_save_config","/Users/tomhanlon/tensorflow/vgg16/keras-model-zoo/deep-learning-models/vgg_save.h5");
         ComputationGraph model = KerasModelImport.importKerasModelAndWeights("/tmp/vgg_combined_save.h5",true);
-
 
         // img = image.load_img(img_path, target_size=(224, 224))
 
